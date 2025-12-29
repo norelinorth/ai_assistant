@@ -1,6 +1,6 @@
 [project]
 name = "norelinorth_ai_assistant"
-version = "2.2.0"
+version = "2.2.1"
 description = "AI Assistant for Frappe/ERPNext"
 requires-python = ">=3.10"
 readme = "README_EMBED_V2.md"
