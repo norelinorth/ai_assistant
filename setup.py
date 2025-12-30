@@ -8,7 +8,7 @@ setup(
     version="2.2.1",
     description="Embedded AI Assistant inside ERPNext DocTypes with Langfuse observability",
     author="Noreli North",
-    author_email="support@norelinorth.com",
+    author_email="norelinorth@users.noreply.github.com",
     packages=find_packages(),
     zip_safe=False,
     include_package_data=True,

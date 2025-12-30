@@ -4,9 +4,9 @@ app_name = "norelinorth_ai_assistant"
 app_title = "Noreli North AI Assistant"
 app_publisher = "Noreli North"
 app_description = "Embedded AI Assistant inside ERPNext DocTypes with Langfuse observability."
-app_email = "support@norelinorth.com"
+app_email = "norelinorth@users.noreply.github.com"
 app_license = "MIT"
-app_version = "2.2.11"
+app_version = "2.2.12"
 
 required_apps = ["frappe"]
 
