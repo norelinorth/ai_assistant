@@ -2,6 +2,16 @@
 
 All notable changes to the AI Assistant app will be documented in this file.
 
+## [2.2.3] - 2025-12-30
+
+### Fixed
+- **CRITICAL: JavaScript API Paths** - Fixed all JavaScript API calls to use new module name
+  - `ai_assistant_integration.js`: Fixed `start_session` and `chat_once` API calls
+  - `ai_chat.js`: Fixed all API method paths for chat page
+  - Error "App ai_assistant is not installed" is now resolved
+
+---
+
 ## [2.2.2] - 2025-12-29
 
 ### Fixed

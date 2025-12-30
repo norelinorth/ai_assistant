@@ -170,7 +170,7 @@ class AIChatPage {
 	
 	load_recent_sessions() {
 		frappe.call({
-			method: 'ai_assistant.ai_assistant.page.ai_chat.ai_chat.get_recent_sessions',
+			method: 'norelinorth_ai_assistant.ai_assistant.page.ai_chat.ai_chat.get_recent_sessions',
 			callback: (r) => {
 				if (r.message) {
 					this.render_sessions(r.message);
@@ -216,7 +216,7 @@ class AIChatPage {
 		this.container.find(`.session-item[data-session="${session_name}"]`).addClass('active');
 		
 		frappe.call({
-			method: 'ai_assistant.ai_assistant.page.ai_chat.ai_chat.get_session_messages',
+			method: 'norelinorth_ai_assistant.ai_assistant.page.ai_chat.ai_chat.get_session_messages',
 			args: { session_name },
 			callback: (r) => {
 				if (r.message) {
@@ -286,7 +286,7 @@ class AIChatPage {
 		messagesContainer.scrollTop(messagesContainer[0].scrollHeight);
 		
 		frappe.call({
-			method: 'ai_assistant.api.chat_once',
+			method: 'norelinorth_ai_assistant.api.chat_once',
 			args: {
 				session: this.current_session.name,
 				prompt: message
@@ -322,7 +322,7 @@ class AIChatPage {
 	
 	show_new_session_dialog() {
 		frappe.call({
-			method: 'ai_assistant.ai_assistant.page.ai_chat.ai_chat.get_available_doctypes',
+			method: 'norelinorth_ai_assistant.ai_assistant.page.ai_chat.ai_chat.get_available_doctypes',
 			callback: (r) => {
 				const doctypes = r.message || [];
 				
@@ -372,7 +372,7 @@ class AIChatPage {
 						}
 						
 						frappe.call({
-							method: 'ai_assistant.api.start_session',
+							method: 'norelinorth_ai_assistant.api.start_session',
 							args: args,
 							callback: (r) => {
 								if (r.message && r.message.name) {

@@ -263,7 +263,7 @@ frappe.ai_assistant = {
             show_status(__('Initializing AI Assistant...'));
 
             return frappe.call({
-                method: 'ai_assistant.api.start_session',
+                method: 'norelinorth_ai_assistant.api.start_session',
                 args: {
                     target_doctype: frm.doctype,
                     target_name: frm.doc.name || 'new'
@@ -328,7 +328,7 @@ frappe.ai_assistant = {
             ensure_session()
                 .then(function(session) {
                     return frappe.call({
-                        method: 'ai_assistant.api.chat_once',
+                        method: 'norelinorth_ai_assistant.api.chat_once',
                         args: {
                             session: session,
                             prompt: message
