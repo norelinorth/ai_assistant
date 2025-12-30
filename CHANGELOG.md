@@ -2,6 +2,16 @@
 
 All notable changes to the AI Assistant app will be documented in this file.
 
+## [2.2.4] - 2025-12-30
+
+### Fixed
+- **GitHub Actions CI** - Fixed Python version and app name references
+  - Updated Python version from 3.11 to 3.12 (required by Frappe)
+  - Fixed all `ai_assistant` references to `norelinorth_ai_assistant` in CI workflow
+  - CI tests should now pass correctly
+
+---
+
 ## [2.2.3] - 2025-12-30
 
 ### Fixed
