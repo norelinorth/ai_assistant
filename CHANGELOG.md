@@ -2,6 +2,15 @@
 
 All notable changes to the AI Assistant app will be documented in this file.
 
+## [2.2.6] - 2025-12-30
+
+### Fixed
+- **GitHub Actions CI** - Disable uv package manager
+  - Set `BENCH_USE_UV=0` to use pip instead of uv
+  - Fixes gunicorn URL dependency resolution error
+
+---
+
 ## [2.2.5] - 2025-12-30
 
 ### Fixed
