@@ -150,7 +150,7 @@ except Exception as e:
 - **Documentation**: See README.md and INSTALLATION.md
 - **Standards**: Review Frappe Framework documentation
 - **Issues**: Open a GitHub issue
-- **Contact**: honeyspotdaily@gmail.com
+- **Contact**: Open a [GitHub Discussion](https://github.com/norelinorth/norelinorth_ai_assistant/discussions)
 
 ## License
 
