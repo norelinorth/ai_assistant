@@ -22,6 +22,10 @@ jobs:
             erpnext-version: version-15
             python-version: '3.12'
             node-version: 18
+          - frappe-version: version-16-beta
+            erpnext-version: version-16-beta
+            python-version: '3.14'
+            node-version: 20
 
     services:
       redis-cache:
@@ -93,6 +97,3 @@ jobs:
         run: |
           bench --site test_site set-config allow_tests true
           bench --site test_site run-tests --app norelinorth_ai_assistant
-
-  # v16 tests will be added when Python 3.14 becomes available in GitHub Actions
-  # The app code is v16 compatible - verified locally
