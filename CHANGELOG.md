@@ -2,6 +2,28 @@
 
 All notable changes to AI Assistant will be documented in this file.
 
+## [2.4.0] - 2026-01-02
+
+### Added
+- Frappe Framework v16 compatibility
+- V16_MIGRATION.md documentation for marketplace submission
+- Python 3.13 and 3.14 classifiers
+
+### Changed
+- DocType sort_field updated from `modified` to `creation` (v16 default)
+  - AI Assistant Session
+  - AI Provider
+  - AI Message
+
+### Verified v16 Compatibility
+- No deprecated `frappe.flags.in_test` usage
+- No deprecated translation methods
+- No custom has_permission hooks requiring updates
+- All queries use explicit order_by clauses
+- JavaScript follows proper frappe.provide() pattern
+
+---
+
 ## [2.3.0] - 2025-12-30
 
 ### Changed

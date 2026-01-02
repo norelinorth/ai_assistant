@@ -78,7 +78,7 @@ def ensure_module_def():
     if not frappe.db.exists("Module Def", "AI Assistant"):
         module_def = frappe.new_doc("Module Def")
         module_def.module_name = "AI Assistant"
-        module_def.app_name = "ai_assistant"
+        module_def.app_name = "norelinorth_ai_assistant"
         module_def.insert(ignore_permissions=True)
         print("✅ Module Def created for AI Assistant")
 

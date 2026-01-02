@@ -5,18 +5,28 @@ from frappe import _
 @frappe.whitelist()
 def get_recent_sessions():
 	"""Get recent AI Assistant sessions for current user - real database data"""
+	# Permission check - user must have read access to AI Assistant Session
+	if not frappe.has_permission("AI Assistant Session", "read"):
+		frappe.throw(_("Not permitted to read AI Assistant sessions"))
+
 	return frappe.get_all(
 		"AI Assistant Session",
 		filters={"owner": frappe.session.user},
 		fields=["name", "status", "target_doctype", "target_name", "started_on", "last_activity"],
-		order_by="modified desc",
+		order_by="creation desc",
 		limit=10
 	)
 
 @frappe.whitelist()
 def get_session_messages(session_name):
 	"""Get messages for a session - real database data"""
+	# Check permission BEFORE loading full document (security best practice)
+	if not frappe.has_permission("AI Assistant Session", "read"):
+		frappe.throw(_("Not permitted to read AI Assistant sessions"))
+
 	session_doc = frappe.get_doc("AI Assistant Session", session_name)
+
+	# Also check document-level permission (owner check)
 	if not frappe.has_permission(doc=session_doc, ptype="read"):
 		frappe.throw(_("Not permitted to read this session"))
 
