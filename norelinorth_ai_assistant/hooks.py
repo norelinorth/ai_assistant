@@ -7,10 +7,12 @@ app_description = "Embedded AI Assistant inside ERPNext DocTypes with Langfuse o
 app_icon = "octicon octicon-hubot"
 app_color = "#4F46E5"
 app_license = "MIT"
-app_version = "2.4.4"
+app_version = "2.4.5"
 app_home = "https://github.com/norelinorth/norelinorth_ai_assistant"
 
-required_apps = ["frappe"]
+# Frappe is implicit as base framework
+# ERPNext is optional for DocType integration
+required_apps = []
 
 after_install = "norelinorth_ai_assistant.install.after_install"
 

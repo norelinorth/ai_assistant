@@ -2,6 +2,15 @@
 
 All notable changes to AI Assistant will be documented in this file.
 
+## [2.4.5] - 2026-01-13
+
+### Fixed
+- Frappe v16 installation error (InvalidRemoteException)
+- Remove frappe from required_apps (implicit as base framework)
+- ERPNext remains optional for DocType integration
+
+---
+
 ## [2.4.4] - 2026-01-13
 
 ### Changed
