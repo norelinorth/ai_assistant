@@ -2,6 +2,14 @@
 
 All notable changes to AI Assistant will be documented in this file.
 
+## [2.4.4] - 2026-01-13
+
+### Changed
+- Explicit Frappe version range declaration: `>=15.0.0,<17.0.0`
+- Enables marketplace to properly recognize v15 and v16 compatibility
+
+---
+
 ## [2.4.3] - 2026-01-13
 
 ### Changed
